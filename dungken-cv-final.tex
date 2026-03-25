@@ -1,0 +1,168 @@
+% CV Final for VietIS (Detailed Projects) - Ha Van Dung
+\documentclass[10pt,a4paper]{article}
+
+% Essential packages
+\usepackage[top=0.5cm, bottom=0.5cm, left=1.2cm, right=1.2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+
+% Use modern font
+\usepackage[defaultsans,scale=0.95]{opensans}
+\renewcommand\familydefault{\sfdefault}
+\linespread{1.05}
+
+% Define color palette - Professional Navy Blue (VietIS/Japan Style)
+\definecolor{primary}{RGB}{0, 51, 102}    % Deep Navy Blue
+\definecolor{secondary}{RGB}{200, 0, 0}   % Red (Highlights)
+\definecolor{text}{RGB}{30, 30, 30}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{darkgray}{RGB}{80, 80, 80}
+
+% Setup hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary,
+    pdftitle={Ha Van Dung - Fresher SE Japan}
+}
+
+% Customize section titles
+\titleformat{\section}
+    {\large\bfseries\color{primary}\uppercase}
+    {}{0em}
+    {}
+    [{\color{lightgray}\titlerule[1pt]}]
+\titlespacing{\section}{0pt}{8pt}{6pt}
+
+% Custom commands
+\newcommand{\contactinfo}[2]{
+    \makebox[0pt][l]{\textcolor{secondary}{#1}}%
+    \hspace{14pt}#2
+}
+
+\newcommand{\projectitem}[5]{
+    \noindent\begin{tcolorbox}[
+        colback=white,
+        colframe=lightgray,
+        boxrule=0.5pt,
+        arc=2pt,
+        top=5pt, bottom=5pt, left=6pt, right=6pt
+    ]
+        \noindent\textbf{\color{primary}#1} \hfill \textcolor{darkgray}{\small #2}\\[2pt]
+        {\small\textbf{Stack:} #3}\\[2pt]
+        {\footnotesize\color{darkgray}#4}
+        \vspace{3pt}
+        #5
+    \end{tcolorbox}
+    \vspace{4pt}
+}
+
+% Begin document
+\begin{document}
+\pagestyle{empty}
+
+% --- HEADER ---
+\begin{center}
+    {\fontsize{24}{28}\bfseries\color{primary}HA VAN DUNG}\\[4pt]
+    {\Large\textcolor{secondary}{Fresher Software Engineer}}\\[4pt]
+    \small \textit{Target: Security Application Development \& Long-term career in Japan} \\[6pt]
+    
+    % Contact Information
+    \small
+    \begin{tabular}{c c c}
+        \contactinfo{\faPhone}{+84 32 725 0461} & 
+        \contactinfo{\faEnvelope}{\href{mailto:dungken2211@gmail.com}{brave2112love@gmail.com}} & 
+        \contactinfo{\faMapMarkerAlt}{HCMC, Vietnam} \\
+        \contactinfo{\faLinkedin}{\href{https://linkedin.com/in/dungdev}{linkedin.com/in/dungdev}} & 
+        \contactinfo{\faGithub}{\href{https://github.com/dungken}{github.com/dungken}} & 
+        \contactinfo{\faYoutube}{\href{https://youtube.com/@dungkenn}{youtube.com/@dungkenn}}
+    \end{tabular}
+\end{center}
+
+\vspace{2pt}
+
+% --- PROFESSIONAL SUMMARY ---
+\section{Professional Summary}
+Final-year IT student (Graduating Aug 2026) with \textbf{JLPT N3}. Solid foundation in \textbf{Java (Spring Boot)} and System Migration. Possess strong logical thinking (proven by \textbf{ICPC} and Research Awards), suitable for complex \textbf{Security Applications}. Highly adaptable, familiar with Japanese working culture (Reporting/Teamwork), and fully committed to relocating to Tokyo.
+
+% --- LANGUAGES (Highlight N3 for Japan Onsite) ---
+\section{Languages}
+\noindent
+\textbf{Japanese:} \textbf{JLPT N3} (Exam taken Dec 2025). 
+\begin{itemize}[leftmargin=15pt, nosep]
+    \item Can communicate in daily workplace contexts and read technical specifications.
+    \item Currently self-studying for N2 to improve business level fluency.
+\end{itemize}
+\vspace{2pt}
+\noindent
+\textbf{English:} Professional working proficiency (Good at reading technical documentation).
+
+% --- TECHNICAL SKILLS ---
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+    \textbf{Back-End (Java):} & \textbf{Spring Boot}, \textbf{Spring Security}, JPA, MyBatis, Batch Processing logic. \\
+    \textbf{Front-End:} & HTML, CSS, JavaScript, \textbf{jQuery} (Legacy Maintenance), React.js. \\
+    \textbf{Database:} & \textbf{MySQL}, PostgreSQL, SQL Server (Complex Queries \& Optimization). \\
+    \textbf{System/Tools:} & \textbf{Linux (Ubuntu)}, Docker, Git, VMware (Basic concepts). \\
+    \textbf{Core Skills:} & Data Structures \& Algorithms, OOP, Clean Architecture. \\
+\end{tabularx}
+
+% --- CERTIFICATIONS & ACHIEVEMENTS (Proof for SPI Test) ---
+\section{Certifications \& Achievements}
+\begin{minipage}[t]{0.65\textwidth}
+    \textbf{\small 3rd Prize, Student Scientific Research}\\[1pt]
+    \textcolor{darkgray}{\scriptsize Topic: Ontology-based Web System for Solving Discrete Mathematics Problems} \\
+    \href{https://github.com/dungken/MyResume/blob/master/Certificates/nckh.png}{\textcolor{secondary}{\scriptsize \faExternalLink* View Certificate}}
+\end{minipage}%
+\begin{minipage}[t]{0.35\textwidth}
+    \textbf{\small Team Member - ICPC Central Vietnam 2025}\\[1pt]
+    \textit{\scriptsize (Algorithmic Programming Competition)} \\
+    \href{https://github.com/dungken/MyResume/blob/master/Certificates/icpc.png}{\textcolor{secondary}{\scriptsize \faExternalLink* View Certificate}}
+\end{minipage}
+
+% --- PROJECT EXPERIENCE ---
+\section{Project Experience}
+
+% Project 1: UEH
+\projectitem{UEH Job Portal Ecosystem (Internship Project)}{Jun 2025 -- Dec 2025}
+{.NET 9, ASP.NET Core, Clean Architecture, SQL Server, Docker, jQuery}
+{\href{https://vieclam.ueh.edu.vn/}{\faGlobe \ Client Site} | \href{https://vieclamadmin.ueh.edu.vn/}{\faGlobe \ Admin Site} | \faLock \ \textit{Source Code: Confidential (NDA)}}
+{\begin{itemize}[leftmargin=12pt,itemsep=2pt,topsep=3pt,label={•}]
+    \item \textbf{System Migration Implementation:} Executed the end-to-end migration of 2 portals (Candidate \& Admin) from Legacy .NET to \textbf{.NET 9}. Worked closely under the strict \textbf{Code Review} and guidance of Senior Leads to ensure adherence to \textbf{Clean Architecture} and high-quality coding standards.
+    \item \textbf{Architecture Refactoring:} Collaborated with the team to refactor complex business logic (previously in jQuery/Bootstrap) into a scalable backend using \textbf{CQRS} pattern (MediatR), significantly improving maintainability.
+    \item \textbf{Database Engineering:} Performed critical database refactoring for \textbf{SQL Server} (60+ tables), following instructions to standardize schema. Developed migration scripts and backup protocols to ensure \textbf{100\% data integrity} for \textbf{76,000+ candidates}.
+    \item \textbf{Advanced Features:} Developed an Email Automation Service using background queues. Implemented \textbf{FluentValidation} and \textbf{AutoMapper} to decouple data layers as per project specifications.
+\end{itemize}}
+
+% Project 2: VinCharge (Removed "Private Access" text)
+\projectitem{VinCharge Subscription Platform (Real-world Client)}{Mar 2025 -- Jun 2025}
+{Java 17, Spring Boot 3.2, PostgreSQL, VNPay, JWT, Spring Security}
+{\href{https://github.com/dungken/vincharge-subscription}{\faGithub \ Source Code}}
+{\begin{itemize}[leftmargin=12pt,itemsep=2pt,topsep=3pt,label={•}]
+    \item \textbf{Backend Architecture:} Engineered a scalable RESTful API for EV charging subscription management. Handled complex billing logic and recurring payment schedules using \textbf{Quartz Scheduler}.
+    \item \textbf{Payment Integration:} Successfully integrated \textbf{VNPay} payment gateway with secure \textbf{HMAC-SHA512} signature verification. Implemented \textbf{IPN} (Instant Payment Notification) to process transactions in real-time with high reliability.
+    \item \textbf{Security System:} Built a robust authentication module using \textbf{JWT} (Access \& Refresh Tokens) and Spring Security filters to protect sensitive user data.
+\end{itemize}}
+
+% Project 3: StuTrello
+\projectitem{StuTrello - Task Management System (Personal)}{Jan 2025 -- Apr 2025}
+{React.js, Node.js, Express, MongoDB, Socket.IO}
+{\href{https://utc2-stutrello-taskboard-web.vercel.app/login}{\faGlobe \ Live Demo} | \href{https://github.com/dungken/stutrello-taskboard-web}{\faGithub \ FE Code} | \href{https://github.com/dungken/stutrello-taskboard-api}{\faGithub \ BE Code}}
+{\begin{itemize}[leftmargin=12pt,itemsep=2pt,topsep=3pt,label={•}]
+    \item \textbf{Real-time Collaboration:} Developed a fully functional Kanban board allowing multiple users to edit simultaneously. Leveraged \textbf{Socket.IO} to broadcast updates instantly (card movements, comments) across clients without page reload.
+    \item \textbf{Complex UI Logic:} Implemented smooth \textbf{Drag-and-Drop} functionality for task reordering using React DnD. Handled \textbf{Optimistic UI} updates to ensure a seamless and responsive user experience even under network latency.
+    \item \textbf{Data Optimization:} Designed efficient \textbf{MongoDB Aggregation Pipelines} to filter and sort tasks dynamically based on user criteria.
+\end{itemize}}
+
+% --- EDUCATION ---
+\section{Education}
+\noindent\textbf{Bachelor of Science in Information Technology} \hfill \textcolor{darkgray}{\small 2022 -- 2026}\\[1pt]
+\textcolor{darkgray}{\small University of Transport and Communications, Ho Chi Minh City}
+
+\end{document}

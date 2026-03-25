@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dung Ken | Backend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+    <div class="plus-grid-background"></div>
+    <div id="mouse-glow" class="mouse-glow"></div>
+
+    <header class="sticky-header">
+        <nav class="container">
+            <div class="logo">DUNG<span> KEN</span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-i18n="nav_about">Giới thiệu</a></li>
+                <li><a href="#tech" data-i18n="tech_title">Kỹ năng</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Kinh nghiệm</a></li>
+                <li><a href="#work" data-i18n="nav_work">Dự án</a></li>
+                <li><a href="https://dungdev.notion.site/BOOKS-RESOURCES-3162dbcf6d204bde8ef31cc0d62756a0" target="_blank" data-i18n="nav_books">Kệ Sách</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Liên hệ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang">EN</button>
+                <div class="social-top hide-mobile">
+                    <a href="https://github.com/dungken" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://linkedin.com/in/dungdev" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                </div>
+                <button id="mobile-menu-toggle" class="btn-mobile"><i data-lucide="menu"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section container reveal">
+            <div class="hero-content">
+                <div class="badge" data-i18n="hero_badge">JLPT N3 - Sẵn sàng Onsite</div>
+                <h1 class="gradient-text" data-i18n="hero_title">Fresher Software Engineer</h1>
+                <p data-i18n="hero_subtitle">Hello! I'm Ha Van Dung, a Backend Developer with expertise in building robust server-side applications. Proficient in .NET, Java, I specialize in creating scalable, secure, and efficient backend solutions. Excited about contributing to innovative projects and collaborating with dynamic teams. Let's connect!</p>
+                <div class="hero-btns">
+                    <a href="#work" class="btn-primary">
+                        <span data-i18n="hero_cta">Xem Dự Án</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="CV_HaVanDung_Fresher_SE_Tokyo_N3.pdf" target="_blank" class="btn-outline no-underline">
+                        <i data-lucide="download"></i> <span data-i18n="btn_download">Download CV</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window glass-card">
+                    <div class="window-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                    </div>
+                    <pre><code><span class="keyword">class</span> <span class="title">Developer</span> {
+  constructor() {
+    <span class="this">this</span>.name = <span class="string">"Van Dung Ha"</span>;
+    <span class="this">this</span>.role = <span class="string">"Software Engineer"</span>;
+    <span class="this">this</span>.focus = <span class="string">"Fullstack & AI"</span>;
+    <span class="this">this</span>.lang = <span class="string">"JLPT N3"</span>;
+  }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section container reveal">
+            <div class="section-header">
+                <h2 data-i18n="about_title">Về Tôi</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <!-- <p data-i18n="about_content">Chào bạn! Tôi là Hà Văn Dũng...</p> -->
+                    
+                    <div class="extra-info">
+                        <div class="info-card glass-card reveal">
+                            <div class="info-card-header">
+                                <i data-lucide="graduation-cap" class="info-icon"></i>
+                                <h3 data-i18n="edu_title">Học Vấn</h3>
+                            </div>
+                            <p data-i18n="edu_uni">UTC</p>
+                            <p data-i18n="edu_major">Bachelor of Science in IT (2022 - 2026)</p>
+                        </div>
+                        <div class="info-card glass-card reveal">
+                            <div class="info-card-header">
+                                <i data-lucide="trophy" class="info-icon"></i>
+                                <h3 data-i18n="achieve_title">Giải thưởng</h3>
+                            </div>
+                            <div class="cert-grid">
+                                <div class="cert-item" onclick="openLightbox('nckh.png')">
+                                    <img src="nckh.png" alt="NCKH Certificate">
+                                    <span data-i18n="achieve_nckh">NCKH</span>
+                                </div>
+                                <div class="cert-item" onclick="openLightbox('icpc.png')">
+                                    <img src="icpc.png" alt="ICPC Certificate">
+                                    <span data-i18n="achieve_icpc">ICPC</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-card glass-card reveal">
+                            <div class="info-card-header">
+                                <i data-lucide="languages" class="info-icon"></i>
+                                <h3 data-i18n="lang_title">Ngôn ngữ</h3>
+                            </div>
+                            <p data-i18n="lang_vi">Vietnamese: Native</p>
+                            <p data-i18n="lang_en">English: Professional</p>
+                            <p data-i18n="lang_jp">Japanese: JLPT N3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH SECTION -->
+        <section id="tech" class="tech-section container reveal">
+            <div class="section-header">
+                <h2 data-i18n="tech_title">Kỹ Năng Kỹ Thuật</h2>
+                <div class="line"></div>
+            </div>
+            <div class="bento-grid">
+                <!-- Backend -->
+                <div class="grid-item glass-card reveal">
+                    <div class="tech-header">
+                        <div class="icon-box"><i data-lucide="server"></i></div>
+                        <h3 data-i18n="tech_backend">Backend</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-badge"><i class="devicon-java-plain icon-java"></i> Java</span>
+                        <span class="tech-badge"><i class="devicon-spring-plain icon-spring"></i> Spring Boot</span>
+                        <span class="tech-badge"><i class="devicon-dot-net-plain icon-dotnet"></i> .NET 9</span>
+                        <span class="tech-badge"><i class="devicon-csharp-plain icon-csharp"></i> C#</span>
+                        <span class="tech-badge"><i data-lucide="shield-check"></i> Security</span>
+                        <span class="tech-badge"><i data-lucide="layers"></i> ABP</span>
+                    </div>
+                </div>
+                <!-- Frontend -->
+                <div class="grid-item glass-card reveal">
+                    <div class="tech-header">
+                        <div class="icon-box"><i data-lucide="layout"></i></div>
+                        <h3 data-i18n="tech_frontend">Frontend</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-badge"><i class="devicon-react-original icon-react"></i> React</span>
+                        <span class="tech-badge"><i class="devicon-vuejs-plain icon-vue"></i> Vue 3</span>
+                        <span class="tech-badge"><i class="devicon-flutter-plain icon-flutter"></i> Flutter</span>
+                        <span class="tech-badge"><i class="devicon-typescript-plain icon-typescript"></i> TypeScript</span>
+                        <span class="tech-badge"><i class="devicon-jquery-plain"></i> jQuery</span>
+                    </div>
+                </div>
+                <!-- Database & Tools -->
+                <div class="grid-item glass-card reveal">
+                    <div class="tech-header">
+                        <div class="icon-box"><i data-lucide="database"></i></div>
+                        <h3 data-i18n="tech_database">DB & Tools</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-badge"><i class="devicon-mysql-plain icon-mysql"></i> MySQL</span>
+                        <span class="tech-badge"><i class="devicon-postgresql-plain icon-postgres"></i> PostgreSQL</span>
+                        <span class="tech-badge"><i class="devicon-microsoftsqlserver-plain icon-dotnet"></i> SQL Server</span>
+                        <span class="tech-badge"><i class="devicon-docker-plain icon-docker"></i> Docker</span>
+                        <span class="tech-badge"><i class="devicon-linux-plain"></i> Linux</span>
+                        <span class="tech-badge"><i class="devicon-git-plain"></i> Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="experience-section container reveal">
+            <div class="section-header">
+                <h2 data-i18n="exp_title">Kinh Nghiệm</h2>
+                <div class="line"></div>
+            </div>
+            <div class="timeline-container">
+                <!-- SST -->
+                <div class="timeline-block reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time-header">
+                            <a href="https://smartsports.vn/" target="_blank" class="company-link">
+                                Smart Sports Tablet - SST <i data-lucide="external-link" class="link-icon"></i>
+                            </a>
+                            <span class="period">01/2026 - Present</span>
+                        </div>
+                        <span class="role" data-i18n="exp_sst_role">Full Stack Engineer (Lead Backend)</span>
+                        <p data-i18n="exp_sst_desc"></p>
+                        <div class="exp-tech-stack">
+                            <span class="tech-tag"><i class="devicon-dot-net-plain"></i> .NET 9</span>
+                            <span class="tech-tag"><i data-lucide="layers"></i> Clean Arch</span>
+                            <span class="tech-tag"><i data-lucide="cpu"></i> IoT / TCP</span>
+                            <span class="tech-tag"><i data-lucide="database"></i> CQRS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UEH -->
+                <div class="timeline-block reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time-header">
+                            <a href="https://vieclam.ueh.edu.vn" target="_blank" class="company-link">
+                                UEH University <i data-lucide="external-link" class="link-icon"></i>
+                            </a>
+                            <span class="period">07/2025 - 12/2025</span>
+                        </div>
+                        <span class="role" data-i18n="exp_ueh_role">Backend Developer (Migration Project)</span>
+                        <p data-i18n="exp_ueh_desc"></p>
+                        <div class="exp-tech-stack">
+                            <span class="tech-tag"><i class="devicon-dot-net-plain"></i> .NET 9</span>
+                            <span class="tech-tag"><i class="devicon-microsoftsqlserver-plain"></i> SQL Server</span>
+                            <span class="tech-tag"><i data-lucide="refresh-cw"></i> Migration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITBee -->
+                <div class="timeline-block reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time-header">
+                            <a href="https://itbeesolutions.vn/" target="_blank" class="company-link">
+                                ITBee Solutions <i data-lucide="external-link" class="link-icon"></i>
+                            </a>
+                            <span class="period">04/2025 - 06/2025</span>
+                        </div>
+                        <span class="role" data-i18n="exp_itbee_role">Backend Developer Intern</span>
+                        <p data-i18n="exp_itbee_desc"></p>
+                        <div class="exp-tech-stack">
+                            <span class="tech-tag"><i data-lucide="layers"></i> ABP Framework</span>
+                            <span class="tech-tag"><i data-lucide="shield-check"></i> Unit Testing</span>
+                            <span class="tech-tag"><i class="devicon-csharp-plain"></i> ASP.NET Core</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK SECTION (PROJECTS) -->
+        <section id="work" class="projects-section container reveal">
+            <div class="section-header">
+                <h2 data-i18n="projects_title">Kinh Nghiệm Dự Án</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal">
+                    <div class="project-info">
+                        <h3>UEH Job Portal</h3>
+                        <p data-i18n="project_ueh_desc">UEH Job Portal Ecosystem migration to .NET 9.</p>
+                        <div class="tags">
+                            <span><i class="devicon-dot-net-plain icon-dotnet"></i> .NET 9</span>
+                            <span><i data-lucide="layers"></i> CQRS</span>
+                            <span><i class="devicon-microsoftsqlserver-plain icon-dotnet"></i> SQL Server</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://vieclam.ueh.edu.vn/" target="_blank" class="btn-sm"><i data-lucide="globe"></i> <span>Live</span></a>
+                        <button class="btn-sm outline project-detail-btn" data-project="ueh"><i data-lucide="info"></i> <span data-i18n="nav_about">Chi tiết</span></button>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-info">
+                        <h3>VinCharge</h3>
+                        <p data-i18n="project_vincharge_desc">EV charging subscription platform for enterprise clients.</p>
+                        <div class="tags">
+                            <span><i class="devicon-java-plain icon-java"></i> Java 17</span>
+                            <span><i class="devicon-spring-plain icon-spring"></i> Spring Boot</span>
+                            <span><i data-lucide="credit-card"></i> VNPay</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/dungken/vincharge-subscription" target="_blank" class="btn-sm"><i data-lucide="github"></i> <span data-i18n="project_view_code">Code</span></a>
+                        <button class="btn-sm outline project-detail-btn" data-project="vincharge"><i data-lucide="info"></i> <span data-i18n="nav_about">Chi tiết</span></button>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-info">
+                        <h3>StuTrello</h3>
+                        <p data-i18n="project_trello_desc">StuTrello real-time task management system.</p>
+                        <div class="tags">
+                            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+                            <span><i data-lucide="zap"></i> Socket.IO</span>
+                            <span><i class="devicon-react-original icon-react"></i> React</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://utc2-stutrello-taskboard-web.vercel.app/" target="_blank" class="btn-sm"><i data-lucide="globe"></i> <span>Live</span></a>
+                        <a href="https://github.com/dungken/stutrello-taskboard-web" target="_blank" class="btn-sm outline"><i data-lucide="github"></i> <span data-i18n="project_view_code">Code</span></a>
+                        <button class="btn-sm outline project-detail-btn" data-project="trello"><i data-lucide="info"></i> <span data-i18n="nav_about">Chi tiết</span></button>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-info">
+                        <h3>SST Billiard</h3>
+                        <p data-i18n="project_billiard_desc">SST Billiard management (.NET 9, Clean Arch, CQRS).</p>
+                        <div class="tags">
+                            <span><i class="devicon-dot-net-plain icon-dotnet"></i> .NET 9</span>
+                            <span><i class="devicon-vuejs-plain icon-vue"></i> Vue 3</span>
+                            <span><i data-lucide="cpu"></i> IoT</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/dungken/MyResume" target="_blank" class="btn-sm"><i data-lucide="github"></i> <span data-i18n="project_view_code">Code</span></a>
+                        <button class="btn-sm outline project-detail-btn" data-project="billiard"><i data-lucide="info"></i> <span data-i18n="nav_about">Chi tiết</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section container reveal">
+            <div class="section-header">
+                <h2 data-i18n="nav_contact">Liên hệ</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="contact-card glass-card reveal">
+                <div class="contact-info-side">
+                    <h3 data-i18n="contact_connect">Kết nối với tôi</h3>
+                    <p data-i18n="contact_subtitle">Hãy kết nối để cùng tạo ra những điều tuyệt vời!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:brave2112love@gmail.com" class="contact-method">
+                            <div class="method-icon"><i data-lucide="mail"></i></div>
+                            <div class="method-text">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">brave2112love@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="social-grid">
+                    <a href="https://linkedin.com/in/dungdev" target="_blank" class="social-card linkedin">
+                        <i class="devicon-linkedin-plain colored"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/dungken" target="_blank" class="social-card github">
+                        <i class="devicon-github-original"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.facebook.com/dunke3n" target="_blank" class="social-card facebook">
+                        <i class="devicon-facebook-plain colored"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://youtube.com/@dungkenn" target="_blank" class="social-card youtube">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40" class="yt-svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-grid">
+            <div class="footer-logo">DUNG<span> KEN</span></div>
+            <p data-i18n="footer_rights">© 2026 Van Dung Ha. All rights reserved.</p>
+            <div class="social-bottom">
+                <a href="https://linkedin.com/in/dungdev" target="_blank"><i data-lucide="linkedin"></i></a>
+                <a href="https://github.com/dungken" target="_blank"><i data-lucide="github"></i></a>
+                <a href="https://www.facebook.com/dunke3n" target="_blank"><i data-lucide="facebook"></i></a>
+                <a href="https://youtube.com/@dungkenn" target="_blank"><i data-lucide="youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal" id="close-project-modal">&times;</span>
+            <div id="modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc" class="modal-detail-text"></p>
+                <div id="modal-tags" class="tags"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="modal lightbox">
+        <div class="modal-content glass-card">
+            <span class="close-modal" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Certificate Large">
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
