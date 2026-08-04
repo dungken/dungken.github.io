@@ -1,0 +1,232 @@
+% Ha Van Dung -- detailed portfolio CV
+% Compile with: pdflatex CV_HaVanDung_Portfolio.tex
+% The document is intentionally multi-page: it prioritizes project evidence
+% and implementation detail over a one-page application-resume format.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=0.9cm,bottom=1.05cm,left=1.05cm,right=1.05cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[defaultsans,scale=0.94]{opensans}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.0}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{iftex}
+
+% Improve text extraction for ATS systems under pdfLaTeX. XeLaTeX/Tectonic
+% already writes Unicode-aware text and must not load pdfTeX-only commands.
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\definecolor{navy}{HTML}{17365D}
+\definecolor{teal}{HTML}{087E8B}
+\definecolor{ink}{HTML}{252B31}
+\definecolor{muted}{HTML}{5B6570}
+\definecolor{rule}{HTML}{CBD3DA}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=teal,
+  linkcolor=teal,
+  pdftitle={Ha Van Dung -- Software Developer Portfolio CV},
+  pdfauthor={Ha Van Dung},
+  pdfsubject={Detailed software development experience and project portfolio}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\color{ink}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\fancyfoot[L]{\scriptsize\color{muted}Ha Van Dung \textbar{} Software Developer Portfolio CV}
+\fancyfoot[R]{\scriptsize\color{muted}Page \thepage\ of \pageref*{LastPage}}
+\setlength{\footskip}{15pt}
+
+\titleformat{\section}
+  {\large\bfseries\color{navy}}
+  {}{0pt}{}
+  [{\vspace{1.5pt}\color{rule}\titlerule[0.55pt]}]
+\titlespacing*{\section}{0pt}{5pt}{2.5pt}
+
+\newcommand{\roleline}[2]{%
+  \textbf{\large\color{navy}#1}\hfill\textbf{\color{muted}#2}\par
+}
+
+\newcommand{\orgline}[2]{%
+  \textbf{#1}\hfill\textit{\color{muted}#2}\par
+}
+
+\newcommand{\stackline}[1]{%
+  \vspace{1pt}{\small\textbf{Core stack:} #1}\par\vspace{1pt}
+}
+
+\newcommand{\projecttitle}[3]{%
+  \textbf{\large\color{navy}#1}\hfill\textbf{\color{muted}#2}\par
+  \textit{#3}\par
+}
+
+\newcommand{\projectlinks}[1]{%
+  {\small\textbf{Links:} #1}\par\vspace{1pt}
+}
+
+\newcommand{\cvlink}[2]{\href{#1}{#2}}
+
+\newcommand{\skillline}[2]{%
+  \textbf{\color{muted}#1:} #2\par\vspace{0.6pt}
+}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[
+    leftmargin=14pt,
+    label=\textcolor{teal}{\raisebox{0.1ex}{\small\textbullet}},
+    itemsep=1.1pt,
+    topsep=1pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
+}{\end{itemize}}
+
+\begin{document}
+
+% -----------------------------------------------------------------------------
+% PAGE 1 -- Profile, capabilities, and primary professional experience
+% -----------------------------------------------------------------------------
+\begin{center}
+  {\fontsize{20}{22}\selectfont\bfseries\color{navy}HA VAN DUNG}\par
+  \vspace{1pt}
+  {\large\bfseries\color{teal}SOFTWARE DEVELOPER -- .NET / FLUTTER / FULL-STACK}\par
+  \vspace{3pt}
+  \small
+  Ho Chi Minh City, Vietnam \textbar{}
+  \href{tel:+84327250461}{+84 32 725 0461} \textbar{}
+  \href{mailto:dungken2211@gmail.com}{dungken2211@gmail.com}\par
+  \vspace{2pt}
+  \cvlink{https://dungken.github.io}{Portfolio} \textbar{}
+  \cvlink{https://github.com/dungken}{GitHub} \textbar{}
+  \cvlink{https://www.linkedin.com/in/dungdev}{LinkedIn}
+\end{center}
+
+\section{PROFESSIONAL SUMMARY}
+Software developer with approximately one year of professional experience delivering .NET 9 backend/full-stack features and production Flutter tablet workflows. Hands-on with REST APIs, SignalR, relational data, responsive interfaces, automated tests, and debugging across application and Android toolchain layers.
+
+\section{TECHNICAL SKILLS}
+\skillline{Languages}{C\#, Dart, TypeScript/JavaScript, Python, Java 17, SQL}
+\skillline{Backend}{.NET 9, ASP.NET Core MVC/Web API, EF Core, CQRS/MediatR, FastAPI, Spring Boot, Node.js/Express}
+\skillline{Mobile and web}{Flutter 3.x, BLoC/Cubit, Provider, Dio, GetIt, React, Vue 3, Bootstrap, Tailwind CSS}
+\skillline{Data and integration}{SQL Server, PostgreSQL, MySQL, MongoDB, SQLite, REST, SignalR, Socket.IO, JWT/OAuth2/RBAC}
+\skillline{Quality and tools}{NUnit, Moq, FluentAssertions, Flutter analyze/test, Git, Docker Compose, Swagger/Postman}
+
+\section{EXPERIENCE}
+\roleline{Software Developer (.NET / Flutter)}{Jan 2026 -- Jul 2026}
+\orgline{SST -- Billiards Tournament and Club Management Platform}{Full-time, Remote}
+\stackline{.NET 9, EF Core, SQL Server, CQRS/MediatR, Vue 3, Flutter, BLoC/Cubit, Dio, GetIt, SignalR, SQLite}
+\begin{cvitems}
+  \item Delivered backend, web, and tablet features for tournaments, match scoring, table operations, club shifts, attendance, payroll, loyalty, and role-based workflows.
+  \item Implemented .NET APIs and Vue interfaces for tournament setup, match/player selection, manual draws, single/double-elimination brackets, scheduling, PDF outputs, and live multi-table monitoring.
+  \item Built Flutter tablet flows for tournament, match, and table selection; mapped API models into BLoC/Cubit state; and auto-filled Pool/three-cushion pre-match settings while preserving operator overrides.
+  \item Integrated authenticated REST and SignalR actions for assignment/release, score synchronization, walkovers, undo, and bracket events; added reconnection/group rejoin and debounced score updates for unstable networks.
+  \item Extended loyalty tracking across Pool, Carom, and Sport modes with SQLite phone migration, active-time calculation excluding pauses/warm-up, editable member data, warnings, and non-blocking end-game submission.
+  \item Reduced duplicate multi-tablet operations through collision-resistant client IDs and backend idempotency; tested command/business flows with NUnit, Moq, and FluentAssertions and debugged Gradle/JNI/x86\_64 packaging issues.
+\end{cvitems}
+
+\vspace{2pt}
+\roleline{Freelance Full-stack Developer}{Jul 2025 -- Dec 2025}
+\orgline{UEH Career Portal -- University of Economics Ho Chi Minh City}{Remote; senior-reviewed delivery}
+\stackline{.NET 9, ASP.NET Core MVC/Web API, EF Core, SQL Server, CQRS/MediatR, jQuery, Bootstrap}
+\begin{cvitems}
+  \item Helped modernize candidate and administration portals from legacy .NET to .NET 9 while following the client's architecture, code-review process, and release constraints.
+  \item Implemented recruitment workflows for job postings, candidate/company profiles, administration, and queued email notifications using CQRS/MediatR, FluentValidation, and AutoMapper.
+  \item Worked with more than 60 SQL Server tables supporting 76,000+ candidates and 3,000 companies; handled migrations, compatibility, backups, and query-oriented debugging carefully.
+  \item Coordinated APIs with jQuery/Bootstrap views and validated fixes across candidate/admin roles. Public references: \cvlink{https://vieclam.ueh.edu.vn/}{candidate portal} and \cvlink{https://vieclamadmin.ueh.edu.vn/}{admin portal}.
+\end{cvitems}
+
+\section{PROJECTS}
+\projecttitle{Explainable IT CV Intelligence and Career Assistant}{Feb 2026 -- Jul 2026}{Individual graduation thesis -- research and full-stack implementation}
+\stackline{Python 3.12, FastAPI, PostgreSQL/Neon, React 19, TypeScript, Recharts, Groq Llama 3.3 70B, BeautifulSoup, Docker Compose}
+\projectlinks{\cvlink{https://cv-assistant-7yr.pages.dev/}{Live application} \textbar{} \cvlink{https://github.com/dungken/cv-assistant}{Source repository}}
+\begin{cvitems}
+  \item Implemented an eight-dimension CV freshness framework using AHP-derived weights and WSM scoring, producing experience-level-specific scores and transparent per-dimension explanations.
+  \item Built multi-source JD crawlers with normalization, cross-source deduplication, scheduled ingestion, data-quality scoring, and a market dashboard exposing 33 skill/role/level/location metrics.
+  \item Combined deterministic extraction and a bilingual skill ontology with grounded LLM fallback, covering 20+ entity types while retaining traceability to source CV/JD text.
+  \item Implemented cascade matching, a seven-dimension CV--JD score, opportunity-window analysis, batch LLM ranking, multilingual Career Advisor, and ATS-oriented CV generation.
+  \item Evaluated 40+ CVs across five roles and three levels; added OAuth2/JWT/RBAC and human review gates; deployed a modular FastAPI design using Docker Compose, Cloudflare Pages, and Render-compatible infrastructure.
+\end{cvitems}
+
+\vspace{2pt}
+\newpage
+\projecttitle{VinCharge Subscription Platform}{Mar 2025 -- Jun 2025}{Full-stack EV charging subscription and billing project}
+\stackline{Java 17, Spring Boot, Spring Security, PostgreSQL/Flyway, Flutter/Provider, VNPay, JWT, Cloudinary}
+\projectlinks{\cvlink{https://github.com/dungken/vincharge-subscription}{Source repository}}
+\begin{cvitems}
+  \item Built REST modules for JWT/BCrypt authentication, OTP recovery, contracts, subscription limits, consumption records, pricing, and transaction history; standardized validation, errors, migrations, and OpenAPI documentation.
+  \item Integrated VNPay payment URL, signed return, server IPN, HMAC-SHA512 verification, transaction persistence, Cloudinary meter evidence, and SMTP notifications.
+  \item Managed Flyway migrations and developed the Flutter app with Provider, REST/JWT sessions, localization, image/permission handling, QR-assisted payments, validation, and responsive layouts.
+\end{cvitems}
+
+\vspace{2pt}
+\projecttitle{Speaking English with AI}{Feb 2025 -- May 2025}{Flutter team project -- four developers}
+\stackline{Flutter, Dart, Clean Architecture, BLoC, GetIt, Hive, SharedPreferences, MethodChannel, audio/transcription APIs}
+\projectlinks{\cvlink{https://github.com/dungken/MyResume/tree/master/Frontend/speaking-english-with-ai}{Project source}}
+\begin{cvitems}
+  \item Developed scenario-based speaking practice with recording, transcription, and AI feedback on pronunciation, grammar, vocabulary, and fluency.
+  \item Structured feature-first presentation/domain/data layers with BLoC, repositories, GetIt, reusable error mapping, persistence, and responsive portrait/landscape states.
+  \item Coordinated recording/playback/result states and debugged Android media through MethodChannel and SurfaceView lifecycle handling, including buffer-queue recovery.
+\end{cvitems}
+
+\projecttitle{StuTrello Real-time Task Board}{Jan 2025 -- Apr 2025}{Personal full-stack collaboration project}
+\stackline{React, Redux Toolkit, Material UI, Node.js/Express, MongoDB, Socket.IO, JWT, Joi, Cloudinary, Brevo}
+\projectlinks{\cvlink{https://utc2-stutrello-taskboard-web.vercel.app/}{Live application} \textbar{} \cvlink{https://github.com/dungken/stutrello-taskboard-web}{Frontend} \textbar{} \cvlink{https://github.com/dungken/stutrello-taskboard-api}{Backend}}
+\begin{cvitems}
+  \item Built board/column/card CRUD with \texttt{@dnd-kit} drag-and-drop, custom collision handling, cross-column persistence, and optimistic updates.
+  \item Implemented access/refresh-token sessions, protected routes, membership/role checks, versioned Express APIs, Joi validation, and MongoDB aggregation for pagination/filtering.
+  \item Added comments, members, cover uploads, Socket.IO notifications, and invitations backed by Brevo email while keeping optimistic Redux state consistent with persisted ordering.
+\end{cvitems}
+
+\vspace{2pt}
+\projecttitle{Ontology-based Scientific Research Platform}{2024 -- 2025}{Awarded research project for discrete-mathematics problem solving}
+\stackline{Java, Spring Boot, Spring Security, React 18, TypeScript, Bootstrap 5, MySQL, JWT, Quill/CKEditor}
+\projectlinks{\cvlink{https://github.com/dungken/MyResume/tree/master/Frontend/scientific-research}{Project materials}}
+\begin{cvitems}
+  \item Built an ontology-oriented knowledge base for discrete mathematics with theory, examples, articles, and discussions; implemented JWT Admin/Staff/User access, search/pagination, and rich-text editing.
+  \item Connected typed React views to Spring Boot/MySQL APIs and supported research validation; the project received Third Prize in Student Scientific Research 2024--2025.
+\end{cvitems}
+
+\vspace{2pt}
+\projecttitle{Coolmate E-commerce System}{Academic project}{Customer storefront, administration portal, and ASP.NET Core API}
+\stackline{ASP.NET Core, EF Core, SQL Server, React 18, TypeScript, Bootstrap, JWT/RBAC, Firebase/OAuth}
+\projectlinks{\cvlink{https://github.com/dungken/MyResume}{Repository collection}}
+\begin{cvitems}
+  \item Built responsive React customer/admin clients and ASP.NET Core/SQL Server APIs for catalog, cart, checkout, profiles, orders, inventory, dashboards, JWT authentication, and granular RBAC.
+\end{cvitems}
+
+\section{EDUCATION}
+\roleline{Bachelor of Information Technology}{2022 -- Expected Aug 2026}
+\orgline{University of Transport and Communications, Ho Chi Minh City}{Requirements completed; diploma pending}
+Graduation thesis focused on explainable multi-criteria assessment of IT CVs using AHP and WSM.
+
+\section{ACHIEVEMENTS}
+\begin{cvitems}
+  \item \textbf{Third Prize, Student Scientific Research 2025--2026} -- explainable AHP/WSM assessment for IT CVs.
+  \item \textbf{Third Prize, Student Scientific Research 2024--2025} -- ontology-based discrete-mathematics web system.
+  \item \textbf{ICPC Central Vietnam 2024} -- university team member; team solved four problems.
+\end{cvitems}
+
+\section{LANGUAGES}
+\textbf{Vietnamese:} Native \textbar{} \textbf{English:} Technical reading/writing; improving speaking \textbar{} \textbf{Japanese:} Took JLPT N3 Jul 2026 (result pending); preparing for N2 Dec 2026
+
+\end{document}
